@@ -2,28 +2,63 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
+    <title>Tweeter LHL - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-
-    <!-- App CSS -->
+      <!-- CSS / Fonts -->
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap">
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
+    
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-    </nav>
+    <div class="topbar">
+      <nav>
+        <div class="logo">tweeter</div>
+        <div>Write a new tweet</div>
+      </nav>
+    </div>
+  
+    <header class="newTweet">
+      <div class="userPhoto">
+        <img src="/images/Darth-Vader-profile.png" border=0> 
+      </div>
+      <div class="username">
+          <h2 class="noMargin">Darth Vader</h2>
+      </div>
+    </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets" class="tweeting">
+          <textarea id="myTweet" name="text" placeholder="What are you humming about?"></textarea>
+          <footer>
+            <!--input type="submit" value="Tweet"-->
+            <button id="postTweet">Tweet</button>
+            <span class="counter" id="myCounter">140</span>
+          </footer>
+        </form>
+
+        <!-- Previous tweets -->
+        <div class="tweets">
+        
+        </div>
+      
+      </section>
+    </main>
+    <p><hr>
+    <div class="tagline">2020 YYC Cohort</div>
+
+    <!-- Scripts -->
+    <script src="/vendor/jquery-2.2.3.min.js"></script>
+    <script src="./scripts/client.js"></script>
+    <script src="./scripts/composer-char-counter.js"></script>
+    
+
   </body>
 </html>

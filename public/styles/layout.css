@@ -21,5 +21,24 @@ body {
 }
 
 /*
- * Additional CSS can be defined below or in other CSS files, as per instructions
+* Additional CSS can be defined below or in other CSS files, as per instructions
  */
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+main {
+  display: flex;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+p {
+  text-align: left;
+}
+
+.tagline {
+  font-size: 12pt;
+  font-weight: lighter;
+}

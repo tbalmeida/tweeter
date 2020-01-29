@@ -1,0 +1,23 @@
+header.newTweet {
+  display: flex;
+  padding-top: 120px;
+  /* background-image: url("https://www.transparenttextures.com/patterns/connected.png"); */
+  background-image: url("/images/Mustafar.jpg");
+  background-color: #A9A8A8;
+  display: flex;
+  height: 430px;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  color: white;
+  padding-bottom: 0%;
+}
+
+.userPhoto, .username {
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.noMargin {
+  margin: 0 auto;
+}
