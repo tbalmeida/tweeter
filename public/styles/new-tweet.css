@@ -54,3 +54,16 @@ footer {
   justify-content: space-between;
   border-top: solid 2px darkgray;
 }
+
+#errorMsg {
+  color: red;
+  border: 3px solid red;
+  padding: 5px 3px;
+}
+
+.arrowUp {
+  object-position: right bottom;
+  object-position: 10%;
+  cursor: pointer;
+  display: none;
+}

@@ -18,7 +18,15 @@
     <div class="topbar">
       <nav>
         <div class="logo">tweeter</div>
-        <div>Write a new tweet</div>
+        <div>
+          
+          <div class="writeNewTweet">
+            <strong>Write </strong> a new tweet
+          </div>
+          <div align=center>
+            <img class="writeNewTweet" src="/images/doubleArrow.png" width="15">
+          </div>
+        </div>
       </nav>
     </div>
   
@@ -33,32 +41,34 @@
 
     <main class="container">
 
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets" class="tweeting">
-          <textarea id="myTweet" name="text" placeholder="What are you humming about?"></textarea>
-          <footer>
-            <!--input type="submit" value="Tweet"-->
-            <button id="postTweet">Tweet</button>
-            <span class="counter" id="myCounter">140</span>
-          </footer>
-        </form>
-
-        <!-- Previous tweets -->
+      <section class="new-tweet" id="newTweetArea">
+        <div id="newTweetMenu">
+          <h2>Compose Tweet</h2>
+          <form method="POST" action="/tweets" class="tweeting">
+            <textarea id="myTweet" name="text" placeholder="What are you humming about?"></textarea>
+            <footer>
+              <button id="postTweet">Tweet</button>
+              <span class="counter" id="myCounter">140</span>
+            </footer>
+          </form>
+        </div>
+        <!-- the placeholder below is to display error messages-->
+        <div id="errorMsg" ></div>
+        
+        <!-- Previous tweets will be loaded into the div below-->
         <div class="tweets">
         
         </div>
       
       </section>
+      <div class="arrowUp"><img src="/images/doubleArrowUp.png"></div>
     </main>
-    <p><hr>
-    <div class="tagline">2020 YYC Cohort</div>
+    <p></p>
 
     <!-- Scripts -->
     <script src="/vendor/jquery-2.2.3.min.js"></script>
     <script src="./scripts/client.js"></script>
     <script src="./scripts/composer-char-counter.js"></script>
-    
 
   </body>
 </html>

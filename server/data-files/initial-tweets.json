@@ -20,5 +20,25 @@
       "text": "Je pense , donc je suis"
     },
     "created_at": 1461113959088
+  },
+  {
+    "user": {
+      "name": "Yoda",
+      "avatars": "http://aux.iconspalace.com/uploads/14681158021258495138.png",
+      "handle": "@yodaman" },
+    "content": {
+      "text": "Do or do not. There is no try."
+    },
+    "created_at": 1461113959088
+  },
+  {
+    "user": {
+      "name": "Darth Vader",
+      "avatars": "https://i.pinimg.com/originals/7d/f5/69/7df569c8cd763ff2fbb2a1cc68634d6c.png",
+      "handle": "@DarthVader" },
+    "content": {
+      "text": "Your lack of faith is disturbing."
+    },
+    "created_at": 1461113959088
   }
 ]
