@@ -1,10 +1,7 @@
 header.newTweet {
   display: flex;
   padding-top: 120px;
-  /* background-image: url("https://www.transparenttextures.com/patterns/connected.png"); */
-  background-image: url("/images/Mustafar.jpg");
-  background-origin: content-box;
-  background-repeat: no-repeat;
+  background-image: url("https://www.transparenttextures.com/patterns/connected.png");
   background-color: #A9A8A8;
   display: flex;
   height: 430px;
