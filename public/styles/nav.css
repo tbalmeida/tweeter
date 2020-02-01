@@ -2,15 +2,15 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #4056a1;
-  height: 120px;
+  height: 90px;
   z-index: 1;
   color: white;
   font-family: Bungee;
   padding: 1.5em;
   position: fixed;
   width: 100%;
-  border: 3 solid red;
+  min-width: 520px;
+  top: 0px;
 }
 
 .logo {
@@ -18,4 +18,12 @@ nav {
   font-weight: 600;
   font-size: 2em;
   width: 200px;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+  nav {
+    /* display: flex; */
+    background-color: #4056a1;
+  }
 }

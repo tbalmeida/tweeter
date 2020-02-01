@@ -20,6 +20,11 @@ body {
   font-size: 24px;
 }
 
+.tweetFooter {
+  display: flex; 
+  justify-content: space-between; 
+  border-top: solid 2px darkgrey;
+}
 /*
 * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -27,13 +32,48 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.pageContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: column;
+}
+
+.myContent {
+  display: flex;
+  min-width: 500px;
+  flex: 1 1 75%;
+}
+
+.tweetingArea {
+  display: block;
+}
+
 main {
   display: flex;
   text-align: center;
-  width: 90%;
   margin: 0 auto;
+  position: relative;
+  max-width: 1000px; 
+  flex: 1 1 75%;
 }
 
 p {
   text-align: left;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+
+  .pageContainer {
+    flex-direction: column;
+  }
+
+  .tweetingArea {
+    display: flex;
+  }
+
+  .myContent {
+    margin-top: 60px;
+  }
 }

@@ -11,58 +11,67 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
-    
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   </head>
 
   <body>
-    <div class="topbar">
-      <nav>
-        <div class="logo">tweeter</div>
-        <div>
-          
-          <div class="writeNewTweet">
-            <strong>Write </strong> a new tweet
-          </div>
-          <div align=center>
-            <img class="writeNewTweet" src="/images/doubleArrow.png" width="15">
-          </div>
-        </div>
-      </nav>
-    </div>
-  
-    <header class="newTweet">
-      <div class="userPhoto">
-        <img src="/images/Darth-Vader-profile.png" border=0> 
-      </div>
-      <div class="username">
-          <h2 class="noMargin">Darth Vader</h2>
-      </div>
-    </header>
 
-    <main class="container">
+    <div class="pageContainer">
 
-      <section class="new-tweet" id="newTweetArea">
-        <div id="newTweetMenu">
-          <h2>Compose Tweet</h2>
-          <form method="POST" action="/tweets" class="tweeting">
-            <textarea id="myTweet" name="text" placeholder="What are you humming about?"></textarea>
-            <footer>
-              <button id="postTweet">Tweet</button>
-              <span class="counter" id="myCounter">140</span>
-            </footer>
-          </form>
+      <!-- Top bar w/ logo and link to write new tweet -->
+        <nav class="_topbar">
+          <div class="logo">tweeter</div>
+          <div>
+            <div class="writeNewTweet"><strong>Write </strong> a new tweet</div>
+            <div align=center><img class="writeNewTweet" src="/images/doubleArrow.png" width="15"></div>
+          </div>
+        </nav>
+
+        <div class="tweetingArea">
+          <!-- Box w/ user name and avatar -->
+          <header class="userInfo">
+            <div class="userPhoto"><img src="/images/Darth-Vader-profile.png"></div>
+            <div class="username">
+              <h2><b>Darth </b>Vader</h2>
+            </div>
+          </header>
+
+
+          <div class="myContent">
+
+            <main class="container">
+              <section class="new-tweet" id="newTweetArea">
+                <div id="newTweetMenu">
+
+                  <h2>Compose Tweet</h2>
+                  <form method="POST" action="/tweets" class="tweeting">
+                    <textarea id="myTweet" name="text" placeholder="What are you humming about?"></textarea>
+                    <footer>
+                      <button id="postTweet">Tweet</button>
+                      <span class="counter" id="myCounter">140</span>
+                    </footer>
+                  </form>
+
+                </div>
+
+                <!-- the area below is used to display error messages -->
+                <div id="errorMsg"></div>
+
+                <!--  -->
+                <div class="tweets"></div>
+
+              </section>
+            </main>
+
+
+          </div>
         </div>
-        <!-- the placeholder below is to display error messages-->
-        <div id="errorMsg" ></div>
-        
-        <!-- Previous tweets will be loaded into the div below-->
-        <div class="tweets">
-        
         </div>
-      
-      </section>
-      <div class="arrowUp"><img src="/images/doubleArrowUp.png"></div>
-    </main>
+
+
     <p></p>
 
     <!-- Scripts -->

@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
@@ -25,9 +26,9 @@ const escape =  function(str) {
         `<span>${tweet.user.handle}</span>` +
         `</header>` +
         `<p>${safeHTML}</p>` +
-        `<footer style="display: flex; justify-content: space-between; border-top: solid 2px darkgrey;">` +
-        `<span>${diffDays} days ago (${firstDate.toDateString()})</span>` +
-        `<span>[like] [comment]</span>` +
+        `<footer class="tweetFooter">` +
+        `<span>${diffDays} days ago <small>(${firstDate.toDateString()})</small></span>` +
+        `<span><i class="fas fa-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></span>` +
         `</footer>` +
         `</article>` +
         `</div>`;
@@ -45,6 +46,7 @@ const getTweetsFromServer = function() {
     url: "/tweets",
     method: "GET"
   }).then(function (tweets) {
+    tweets.reverse();
     renderTweets(tweets)
   });
 }
@@ -62,7 +64,6 @@ const tweetPostHandler = function () {
       if (myTweet.length > 140){
         $( "#errorMsg" ).slideDown( 300 );
         $( "#errorMsg" ).text("Your tweet exceeded the maximum message length.");
-        alert("here");
         return false;
       } else if (myTweet.length === 0) {
         $( "#errorMsg" ).slideDown( 300 );
@@ -77,6 +78,7 @@ const tweetPostHandler = function () {
         })
         .then( function (createdTweet) {
           getTweetsFromServer();
+          $("#myTweet").val("").empty();
         })
         $( "#errorMsg" ).slideUp( 300 );
       }
