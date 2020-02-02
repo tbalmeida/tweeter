@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
   // --- our code goes here ---
   console.log("JQuery on composer-char-counter.js loaded.")

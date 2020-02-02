@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
@@ -27,8 +21,8 @@ const escape =  function(str) {
         `</header>` +
         `<p>${safeHTML}</p>` +
         `<footer class="tweetFooter">` +
-        `<span>${diffDays} days ago <small>(${firstDate.toDateString()})</small></span>` +
-        `<span><i class="fas fa-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></span>` +
+        `<span>${diffDays} days ago <small class="tweetActions">(${firstDate.toDateString()})</small></span>` +
+        `<span class="tweetActions"><i class="far fa-flag"></i> <i class="fas fa-retweet"></i> <i class="far fa-heart"></i></span>` +
         `</footer>` +
         `</article>` +
         `</div>`;
@@ -59,8 +53,8 @@ const tweetPostHandler = function () {
       event.preventDefault();
 
       // Get the tweet text, trim the leading/trailing white spaces and validates the size
-      const myTweet = $("#myTweet").val();
-      myTweet.trim();
+      const myTweet = $("#myTweet").val().trim();
+
       if (myTweet.length > 140){
         $( "#errorMsg" ).slideDown( 300 );
         $( "#errorMsg" ).text("Your tweet exceeded the maximum message length.");
@@ -109,4 +103,5 @@ $( ".arrowUp" ).bind( "click", function() {
   $("#myTweet").focus();
 });
 
+// rolls up the error container when the page is reloaded
 $("#errorMsg" ).slideUp( 0 );
