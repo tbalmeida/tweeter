@@ -4,7 +4,11 @@ Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
 
-It is an interesting project to studi
+## Screenshots
+!["Tweeter app on desktop"](https://github.com/tbalmeida/tweeter/blob/master/docs/tweeter-desktop.png)
+!["The layout changes on mobile devices"](https://github.com/tbalmeida/tweeter/blob/master/docs/tweeter-mobile.png)
+!["Detail of mouse hovering over a tweet box: icons and date are displayed"](https://github.com/tbalmeida/tweeter/blob/master/docs/tweeter-hovering.png)
+!["Tweets validation: no empty tweets, and limited to 140 characters"](https://github.com/tbalmeida/tweeter/blob/master/docs/tweeter-validation.png)
 
 ## Getting Started
 
@@ -24,5 +28,5 @@ It is an interesting project to studi
 
 ## To Do
 
-- Use a DBMS instead of plain datafiles;
-- User registration
+- [ ] Use a DBMS instead of plain datafiles;
+- [ ] User registration
